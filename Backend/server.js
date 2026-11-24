@@ -7,6 +7,7 @@ import authRoutes from './routes/authRoutes.js';
 
 dotenv.config();
 
+// Create an Express application
 const app = express();
 
 app.use(cors());
@@ -21,6 +22,8 @@ app.get('/', (req, res)=>{
 
 connectDB();
 
+
+// start the server - this tells Node.js "Start listening for incoming HTTP request on port 5001"
 app.listen(5001, ()=> {
     console.log('Server is running on port 5001');
 })
